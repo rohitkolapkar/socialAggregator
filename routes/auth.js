@@ -10,8 +10,8 @@ router.route('/google/callback')
 
 router.route('/google')
 .get(passport.authenticate('google',{
-    scope:['https://www.googleapis.com/auth/userinfo.profile',
-            'https://wwww.googleapis.com/auth/userinfo.email']
+    scope:['profile',
+            'email']
 }));
 
 module.exports=router;
